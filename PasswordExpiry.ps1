@@ -468,7 +468,7 @@ $EmailTemplate2 = @"
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                      <img src=""banner.jpg"" alt="PasswordExpiry" width="560" height="150" style="border: 0; line-height: 100%;">
+                      <img src="\\fileserver.cmpy.com\c$\passwordexpiry\banner.jpg" alt="PasswordExpiry" width="560" height="150" style="border: 0; line-height: 100%;">
                       <br>
                       <br>
                       <p>Dear $dName,</p>
