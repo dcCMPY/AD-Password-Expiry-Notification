@@ -468,7 +468,7 @@ $EmailTemplate2 = @"
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                      <img src="\\fileserver.cmpy.com\c$\passwordexpiry\banner.jpg" alt="PasswordExpiry" width="560" height="150" style="border: 0; line-height: 100%;">
+                      <img src="cid:banner.jpg" alt="PasswordExpiry" width="560" height="150" style="border: 0; line-height: 100%;">
                       <br>
                       <br>
                       <p>Dear $dName,</p>
@@ -525,7 +525,7 @@ $EmailTemplate2 = @"
         if (($emailaddress) -ne $null) {
             if ( ($testing -eq $false) -or (($testing -eq $true) -and ($samplesSent -lt $sampleEmails)) ) {
                 try {
-                    Send-Mailmessage -smtpServer $smtpServer -from $from -to $recipient -subject $subject -body $EmailTemplate2 -bodyasHTML -priority High -Encoding $textEncoding -ErrorAction Stop -ErrorVariable err
+                    Send-Mailmessage -smtpServer $smtpServer -from $from -to $recipient -subject $subject -body $EmailTemplate2 -bodyasHTML -priority High -Encoding $textEncoding -ErrorAction Stop -ErrorVariable err -Attachments "\\fileserver.cmpy.com\c$\passwordexpiry\banner.jpg"
                 } catch {
                     write-host "Error: Could not send email to $recipient via $smtpServer"
                     $sent = "Send fail"
